@@ -1,9 +1,11 @@
 import React from 'react';
+import Flex from "./components/atoms/Flex";
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <Flex
+    >
+    </Flex>
   );
 }
 
