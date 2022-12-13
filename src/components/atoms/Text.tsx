@@ -1,7 +1,10 @@
 import styled from "styled-components";
-import {color, typography, TypographyProps} from "styled-system";
+import {color, ColorProps, typography, TypographyProps} from "styled-system";
 
-export const Text = styled.p<Partial<TypographyProps>>`
+export type TextProps = Partial<TypographyProps & ColorProps>
+
+export const Text = styled.p<TextProps>`
   ${typography}
   ${color}
 `
+
