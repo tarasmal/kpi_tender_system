@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
 import AuthTemplate from "../../templates/AuthTemplate/AuthTemplate";
+import Input from "../../atoms/Input/Input";
 
 const SignUp = () => {
     const [email, setEmail] = useState<string>('')
     const [password, setPassword] = useState<string>('')
+    const [confirmPassword, setConfirmPassword] = useState<string>('')
     return (
         <AuthTemplate
             header={'Sign up'}
@@ -13,8 +15,10 @@ const SignUp = () => {
             password={password}
             setPassword={setPassword}
             authHandler={() => {}}
-            navigationText={'Already signed up? Login!'}
-        />
+            navigationText={'Already signed up? Sign up!'}
+        >
+            <Input value={confirmPassword} setValue={setConfirmPassword} placeholder={'Confirm password'}/>
+        </AuthTemplate>
     );
 };
 

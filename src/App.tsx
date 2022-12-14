@@ -1,6 +1,6 @@
 import React from 'react';
 import Flex from "./components/atoms/Flex";
-import SignUp from "./components/pages/SignUp/SignUp";
+import SignIn from "./components/pages/SignIn/SignIn";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         justifyContent={'center'}
         alignItems={'center'}
     >
-      <SignUp />
+      <SignIn />
     </Flex>
   );
 }

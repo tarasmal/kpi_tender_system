@@ -22,6 +22,7 @@ const StyledAuthTemplate = styled(Flex)`
 
 const AuthTemplate = (
     {
+        children,
         header,
         buttonText,
         email,
@@ -38,6 +39,7 @@ const AuthTemplate = (
             <Typography fontSize={'32px'}>{header}</Typography>
             <Input marginBottom={'10px'} value={email} setValue={setEmail} placeholder={'Email'} />
             <Input type={'password'} value={password} setValue={setPassword} placeholder={'Password'} />
+            {children}
             <Button onClick={() => authHandler()}>
                 {buttonText}
             </Button>
