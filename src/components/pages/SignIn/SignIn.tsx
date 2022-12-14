@@ -14,6 +14,7 @@ const SignIn = () => {
             buttonText={'Sign In'}
             authHandler={() => {}}
             navigationText={'Do not have an account? Sign up!'}
+            navigateTo={'/signup'}
         />
     );
 };

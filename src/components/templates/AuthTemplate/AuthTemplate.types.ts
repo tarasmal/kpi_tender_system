@@ -10,6 +10,7 @@ export type AuthTemplateProps = {
     buttonText: string,
     authHandler: Function,
     navigationText: string,
+    navigateTo: string,
 }
 
 

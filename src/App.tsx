@@ -1,6 +1,6 @@
 import React from 'react';
 import Flex from "./components/atoms/Flex";
-import SignIn from "./components/pages/SignIn/SignIn";
+import Router from "./Router";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         justifyContent={'center'}
         alignItems={'center'}
     >
-      <SignIn />
+      <Router />
     </Flex>
   );
 }

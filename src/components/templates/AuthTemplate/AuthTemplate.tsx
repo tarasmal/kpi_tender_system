@@ -6,6 +6,7 @@ import styled from "styled-components";
 import Button from "../../atoms/Button/Button";
 import {Typography} from "../../atoms/Typography";
 import {transparent} from "../../atoms/Button/Button.styles";
+import {useNavigate} from "react-router";
 
 const StyledAuthTemplate = styled(Flex)`
   flex-direction: column;
@@ -30,9 +31,11 @@ const AuthTemplate = (
         password,
         setPassword,
         authHandler,
-        navigationText
+        navigationText,
+        navigateTo
     }: AuthTemplateProps
 ) => {
+    const navigate = useNavigate()
     return (
         <StyledAuthTemplate
         >
@@ -43,7 +46,14 @@ const AuthTemplate = (
             <Button onClick={() => authHandler()}>
                 {buttonText}
             </Button>
-            <Button color={'#29A19C'} currentStyle={transparent} variant={'transparent'} onClick={() => {}}>{navigationText}</Button>
+            <Button
+                color={'#29A19C'}
+                currentStyle={transparent}
+                variant={'transparent'}
+                onClick={() => navigate(navigateTo)}
+            >
+                {navigationText}
+            </Button>
 
         </StyledAuthTemplate>
     );

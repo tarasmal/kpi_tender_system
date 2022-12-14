@@ -15,7 +15,9 @@ const SignUp = () => {
             password={password}
             setPassword={setPassword}
             authHandler={() => {}}
-            navigationText={'Already signed up? Sign up!'}
+            navigationText={'Already signed up? Sign in!'}
+            navigateTo={'/signin'}
+
         >
             <Input value={confirmPassword} setValue={setConfirmPassword} placeholder={'Confirm password'}/>
         </AuthTemplate>
