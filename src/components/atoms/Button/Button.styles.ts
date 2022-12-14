@@ -1,30 +1,38 @@
 import {css} from "styled-components";
-
-export const primary = css`
+const basicStyles = css`
   text-align: center;
   width: 150px;
   height: fit-content;
-  border-radius: 5px;
-  background-color: #bebeef;
-  color: green;
-  border: hidden;
   cursor: pointer;
   &:hover {
     opacity: 0.9;
   }
 `
-
-export const clicked = css`
-  ${primary}
-  &:hover {
-    opacity: 0.8;
-  }
+export const primary = css`
+  ${basicStyles};
+  border-radius: 5px;
+  background-color: #29A19C;
+  color: white;
+  border: hidden;
+  
 `
-export type VariantType = 'clicked'
-export const defineVariant = (variant: VariantType) => {
+export const transparent = css`
+  ${basicStyles};
+  border: hidden;
+  background-color: transparent;
+`
+export type VariantType = 'clicked' | 'transparent'
+export const defineVariant = (variant: VariantType, mainStyle=primary) => {
   switch (variant){
     case "clicked":
-      return clicked
+      return css`
+        ${mainStyle}
+        &:hover {
+          opacity: 0.8;
+        }
+      `
+    case "transparent":
+      return transparent
     default:
       return primary
   }

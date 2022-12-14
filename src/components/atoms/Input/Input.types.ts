@@ -5,7 +5,7 @@ export type InputConfigProps = {
 }
 
 export type InputProps =
-    & Partial<CssProps & InputConfigProps>
+    & Partial<CssProps & InputConfigProps & {type: string,}>
     & Required<{
     value: string
     setValue: Function,

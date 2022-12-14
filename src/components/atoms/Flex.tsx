@@ -4,13 +4,14 @@ import {border, color, flexbox, layout, position, space, typography, FlexboxProp
 import {CssProps} from "../../types/styles.types";
 
 export const Flex = styled.div<FlexboxProps & Partial<CssProps> & {children: ReactNode}>`
-  ${flexbox}
-  ${border}
-  ${color}
-  ${layout}
-  ${position}
-  ${space}
-  ${typography}
+  ${flexbox};
+  ${border};
+  ${color};
+  ${layout};
+  ${position};
+  ${space};
+  ${typography};
+  
 `
 
 export default Flex;

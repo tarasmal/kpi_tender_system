@@ -1,12 +1,16 @@
 import React from 'react';
 import Flex from "./components/atoms/Flex";
-import Button from "./components/atoms/Button/Button";
+import SignUp from "./components/pages/SignUp/SignUp";
 
 function App() {
   return (
     <Flex
+        height={'100vh'}
+        width={'100vw'}
+        justifyContent={'center'}
+        alignItems={'center'}
     >
-      <Button onClick={() => console.log('kek')}>click on me</Button>
+      <SignUp />
     </Flex>
   );
 }

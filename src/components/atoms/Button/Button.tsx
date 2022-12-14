@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
-import {ButtonTypes} from "./Button.types";
+import {ButtonProps} from "./ButtonProps";
 import styled from "styled-components";
 import {border, color, flexbox, layout, space} from "styled-system";
-import {Text} from "../Text";
+import {Typography} from "../Typography";
 import {defineVariant} from "./Button.styles";
 
-const StyledButton = styled.button<ButtonTypes>`
-    ${props => defineVariant(props.variant!)}
+const StyledButton = styled.button<ButtonProps>`
+    ${props => defineVariant(props.variant!, props.currentStyle!)}
     ${space}
     ${flexbox}
     ${border}
@@ -21,13 +21,13 @@ const Button = (
         textStyle,
         variant,
         ...props
-    }: ButtonTypes
+    }: ButtonProps
 ) => {
     const [clicked, setClicked] = useState<boolean>(false)
     const childrenNode = () => {
         return (
              typeof children === 'string' ?
-                <Text>{children}</Text>
+                <Typography>{children}</Typography>
                 :
                 children
         )
